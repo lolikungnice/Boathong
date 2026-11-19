@@ -69,7 +69,21 @@ export function MenuGrid() {
         </p>
       )}
 
-      <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {active === "courses" && (
+        <div className="mt-6 rounded-sm border border-gold/40 bg-charcoal-soft/88 p-5 text-sm leading-relaxed text-cream/80">
+          <h2 className="mb-2 font-display text-xl text-gold">
+            {locale === "jp" ? "本格タイ料理をコースで楽しむ" : "อิ่มอร่อยกับอาหารไทยแบบคอร์ส"}
+          </h2>
+          <p>{locale === "jp"
+            ? "料金はお一人様分です。各コースは2名様以上からご注文いただけます。料理の辛さは調整できます。"
+            : "ราคาต่อท่าน สั่งคอร์สตั้งแต่ 2 ท่านขึ้นไป สามารถปรับระดับความเผ็ดได้"}</p>
+          <p className="mt-1 text-gold">{locale === "jp"
+            ? "コースをご注文のお客様は、＋¥3,000で飲み放題を追加できます。"
+            : "เพิ่มแพ็กเกจดื่มไม่อั้นได้ +¥3,000 ต่อท่าน เมื่อสั่งคอร์สอาหาร"}</p>
+        </div>
+      )}
+
+      <div className={`mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2 ${active === "courses" ? "" : "lg:grid-cols-3"}`}>
         {visibleItems.map((item) => (
           <MenuCard key={item.id} item={item} />
         ))}

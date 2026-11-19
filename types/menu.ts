@@ -12,7 +12,8 @@ export type MenuCategoryId =
   | "drinks"
   | "desserts"
   | "streetFoodSet"
-  | "kidsSet";
+  | "kidsSet"
+  | "courses";
 
 export type SpicyLevel = 0 | 1 | 2 | 3;
 
@@ -26,6 +27,7 @@ export interface MenuItem {
     jp: string;
     th: string;
   };
+  courseDishes?: { jp: string[]; th: string[] };
   price: string; // pre-formatted, e.g. "¥1,408（税込）" or "S ¥1,518（2人前） / L ¥2,948（4人前）"
   image: string; // path under /public/images or remote URL
   imageFit?: "cover" | "contain";

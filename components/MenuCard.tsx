@@ -8,11 +8,11 @@ function SpiceLevel({ level, label }: { level: number; label: string }) {
   if (level === 0) return null;
   return (
     <div className="flex items-center gap-1" aria-label={`${label}: ${level}`}>
-      {Array.from({ length: 3 }).map((_, i) => (
+      {Array.from({ length: level }).map((_, i) => (
         <span
           key={i}
           aria-hidden
-          className={i < level ? "text-lacquer-bright" : "text-cream/15"}
+          className="text-lacquer-bright"
         >
           🌶
         </span>
@@ -38,7 +38,7 @@ export function MenuCard({ item }: { item: MenuItem }) {
             src={item.image}
             alt={locale === "jp" ? item.nameJP : item.nameTH}
             fill
-            sizes="(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"
+            sizes={item.category === "courses" ? "(min-width: 640px) 50vw, 100vw" : "(min-width: 1024px) 25vw, (min-width: 640px) 33vw, 50vw"}
             className={`${item.imageFit === "contain" ? "object-contain" : "object-cover"} transition-transform duration-500 group-hover:scale-105`}
           />
         )}
@@ -64,6 +64,14 @@ export function MenuCard({ item }: { item: MenuItem }) {
         <p className="text-sm leading-relaxed text-cream/70">
           {locale === "jp" ? item.description.jp : item.description.th}
         </p>
+
+        {item.courseDishes && (
+          <ol className="list-decimal space-y-1.5 pl-5 text-sm leading-relaxed text-cream/80">
+            {item.courseDishes[locale === "jp" ? "jp" : "th"].map((dish) => (
+              <li key={dish}>{dish}</li>
+            ))}
+          </ol>
+        )}
 
         <div className="mt-1 flex items-center justify-between gap-3">
           <p className="font-display text-base leading-snug text-gold">{item.price}</p>
