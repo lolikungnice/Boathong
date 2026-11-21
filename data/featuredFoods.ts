@@ -6,7 +6,7 @@ export interface FeaturedFood {
   category: string;
   price: string; // pre-formatted, e.g. "¥1,200"
   image: string;
-  tag: "おすすめ" | "人気" | "NEW";
+  tag?: "おすすめ" | "人気";
 }
 
 // Share image paths with the full menu when the featured dish matches a menu item.
@@ -49,6 +49,5 @@ export const featuredFoods: FeaturedFood[] = [
     category: "本格タイ料理",
     price: "¥1,628",
     image: "/images/menu/khao-soi.jpg",
-    tag: "NEW",
   },
 ];

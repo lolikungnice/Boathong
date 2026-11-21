@@ -11,7 +11,6 @@ const SWIPE_THRESHOLD = 40;
 const tagStyles: Record<string, string> = {
   おすすめ: "bg-gold text-charcoal",
   人気: "bg-lacquer text-cream",
-  NEW: "border border-gold text-gold",
 };
 
 function mod(n: number, m: number) {
@@ -126,11 +125,13 @@ export function FoodCarousel() {
                     }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-charcoal via-charcoal/10 to-transparent" />
+                  {food.tag && (
                   <span
                     className={`absolute left-3 top-3 rounded-sm px-2.5 py-1 text-[11px] font-medium tracking-signage ${tagStyles[food.tag]}`}
                   >
                     {food.tag}
                   </span>
+                  )}
                 </div>
 
                 <div

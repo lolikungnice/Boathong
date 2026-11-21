@@ -3,7 +3,6 @@ import type { MenuCategoryId, MenuItem } from "@/types/menu";
 // Category order controls the order tabs/sections render in on the Menu page.
 export const menuCategories: { id: MenuCategoryId; nameJP: string; nameTH: string }[] = [
   { id: "lunch", nameJP: "ランチ（月〜金）", nameTH: "lunch (จันทร์-ศุกร์)" },
-  { id: "courses", nameJP: "コース", nameTH: "คอร์ส" },
   { id: "friedSnacks", nameJP: "揚げ物・おつまみ", nameTH: "ของทอด/ของกินเล่น" },
   { id: "salads", nameJP: "サラダ", nameTH: "สลัด" },
   { id: "soup", nameJP: "スープ", nameTH: "ซุป" },
@@ -14,6 +13,7 @@ export const menuCategories: { id: MenuCategoryId; nameJP: string; nameTH: strin
   { id: "desserts", nameJP: "デザート", nameTH: "ขนมหวาน" },
   { id: "streetFoodSet", nameJP: "タイ屋台フードセット", nameTH: "เซ็ตสตรีทฟู้ด" },
   { id: "kidsSet", nameJP: "お子様セット", nameTH: "เมนูเด็ก" },
+  { id: "courses", nameJP: "コース", nameTH: "คอร์ส" },
 ];
 
 /**
@@ -241,7 +241,7 @@ export const menuItems: MenuItem[] = [
     category: "friedSnacks",
     spicyLevel: 0,
     available: true,
-    badge: "NEW",
+
   },
   {
     id: "fried-wonton-egg",
@@ -253,7 +253,7 @@ export const menuItems: MenuItem[] = [
     category: "friedSnacks",
     spicyLevel: 0,
     available: true,
-    badge: "NEW",
+
   },
 
   // ---------------------------------------------------------------------
@@ -1475,7 +1475,7 @@ export const menuItems: MenuItem[] = [
     category: "streetFoodSet",
     spicyLevel: 0,
     available: true,
-    badge: "NEW",
+
   },
   {
     id: "kids-set",
@@ -1528,15 +1528,15 @@ export const menuItems: MenuItem[] = [
     "category": "courses",
     "spicyLevel": 1,
     "available": true,
-    "badge": "NEW"
+
   },
   {
     "id": "course-boathong-special",
     "nameJP": "W2 ボアトウンスペシャルコース（全10品）",
     "nameTH": "W2 คอร์สพิเศษบัวทอง (10 อย่าง)",
     "description": {
-      "jp": "海鮮料理を贅沢に味わう全10品。大海老のグリル、ソフトシェルクラブのカレー炒め、海老のすり身揚げ、鶏肉のグリーンカレーを楽しめる特別なコースです。",
-      "th": "คอร์สพิเศษ 10 อย่างสำหรับมื้อสังสรรค์ จัดเต็มด้วยกุ้งแม่น้ำเผา ปูนิ่มผัดผงกะหรี่ ทอดมันกุ้ง ต้มยำกุ้ง และแกงเขียวหวานไก่ เสิร์ฟพร้อมข้าวหอมมะลิและขนมไทย"
+      "jp": "海鮮料理を贅沢に味わう全10品。大海老の串焼き、ソフトシェルクラブのカレー炒め、海老のすり身揚げ、鶏肉のグリーンカレーを楽しめる特別なコースです。",
+      "th": "คอร์สพิเศษ 10 อย่างสำหรับมื้อสังสรรค์ จัดเต็มด้วยกุ้งแม่น้ำเผาเสียบไม้ ปูนิ่มผัดผงกะหรี่ ทอดมันกุ้ง ต้มยำกุ้ง และแกงเขียวหวานไก่ เสิร์ฟพร้อมข้าวหอมมะลิและขนมไทย"
     },
     "courseDishes": {
       "jp": [
@@ -1544,7 +1544,7 @@ export const menuItems: MenuItem[] = [
         "海鮮ヤムウンセン",
         "海老のすり身揚げ",
         "トムヤムクン",
-        "大海老のグリル",
+        "大海老の串焼き",
         "空心菜のタオチオ炒め",
         "ソフトシェルクラブのカレー炒め",
         "鶏肉となすのグリーンカレー",
@@ -1556,7 +1556,7 @@ export const menuItems: MenuItem[] = [
         "ยำวุ้นเส้นทะเล",
         "ทอดมันกุ้ง พร้อมน้ำจิ้ม",
         "ต้มยำกุ้ง",
-        "กุ้งแม่น้ำเผา",
+        "กุ้งแม่น้ำเผาเสียบไม้",
         "ผัดผักบุ้งไฟแดง",
         "ปูนิ่มผัดผงกะหรี่",
         "แกงเขียวหวานไก่",
@@ -1569,7 +1569,7 @@ export const menuItems: MenuItem[] = [
     "category": "courses",
     "spicyLevel": 1,
     "available": true,
-    "badge": "NEW"
+
   },
 ];
 

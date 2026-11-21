@@ -17,7 +17,7 @@ export type MenuCategoryId =
 
 export type SpicyLevel = 0 | 1 | 2 | 3;
 
-export type MenuBadge = "おすすめ" | "人気" | "NEW";
+export type MenuBadge = "おすすめ" | "人気";
 
 export interface MenuItem {
   id: string;
@@ -34,7 +34,7 @@ export interface MenuItem {
   category: MenuCategoryId;
   spicyLevel: SpicyLevel;
   available: boolean;
-  badge?: MenuBadge; // optional おすすめ/人気/NEW ribbon, as shown on the printed menu
+  badge?: MenuBadge; // optional おすすめ/人気 ribbon, as shown on the printed menu
 }
 
 // --- Forward-looking types for the future QR order / kitchen system. ---

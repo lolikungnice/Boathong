@@ -24,7 +24,6 @@ function SpiceLevel({ level, label }: { level: number; label: string }) {
 const badgeStyles: Record<string, string> = {
   おすすめ: "bg-gold text-charcoal",
   人気: "bg-lacquer text-cream",
-  NEW: "border border-gold text-gold bg-charcoal/80",
 };
 
 export function MenuCard({ item }: { item: MenuItem }) {

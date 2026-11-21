@@ -124,9 +124,9 @@ export function PromotionCarousel() {
   return (
     <section className="bg-charcoal-soft/88 backdrop-blur-sm py-24 sm:py-32">
       <div className="container-page">
-        <p className="eyebrow mb-2">PROMOTION</p>
+        <p className="eyebrow mb-2">PROMOTION / NEW</p>
         <h2 className="font-display text-4xl font-medium text-cream sm:text-5xl">
-          プロモーション
+          プロモーション・新着情報
         </h2>
       </div>
 
